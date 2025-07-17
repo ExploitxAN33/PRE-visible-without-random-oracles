@@ -31,7 +31,7 @@ This C++ project demonstrates **pairing-based PRE** with clear role separation, 
 ### 🔧 Build Steps
 
 ```bash
-git clone https://github.com/<your-github-username>/PRE-visible-without-random-oracles.git
+git clone https://github.com/ExploitxAN33/PRE-visible-without-random-oracles.git
 cd PRE-visible-without-random-oracles
 ```
 make
