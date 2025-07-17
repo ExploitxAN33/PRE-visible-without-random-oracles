@@ -15,28 +15,6 @@ This C++ project demonstrates **pairing-based PRE** with clear role separation, 
 - 🛠️ Robust network + element debugging (hex output, logging)
 - 🚫 No random oracles, no black-box crypto — fully visible and auditable
 
----
-
-## 🗂️ Project Structure
-
-.
-├── include/
-│ └── pre_scheme.h # Main PRE class/crypto interface
-├── src/
-│ ├── common/
-│ │ ├── network_utils.cpp # TCP comms and serialization
-│ │ └── pre_scheme.cpp # PRE algorithms and core logic
-│ ├── data_owner.cpp # Alice role: keygen, encrypt, rekey
-│ ├── data_user.cpp # Bob role: keygen, upload, decrypt
-│ └── cloud_server.cpp # Proxy server: manages keys/ciphertext, re-encryption
-├── params/
-│ └── a.param # Pairing parameters (MUST match across programs)
-├── Makefile # Build system
-└── README.md
-
-markdown
-Copy
-Edit
 
 ---
 
@@ -61,24 +39,18 @@ make
 
 ###  🚀 Usage Example
 1️⃣ Start the Proxy Cloud Server
-bash
-Copy
-Edit
+```
 ./build/cloud_server
+```
 Starts the TCP server to receive connections from Alice and Bob.
 
 2️⃣ Run the Data User (Bob)
-bash
-Copy
-Edit
+```
 ./build/data_user <server_ip> <user_id>
 # Example:
 ./build/data_user 127.0.0.1 bob
+```
 Generates Bob’s key pair
-
-Uploads his public key to the server
-
-Waits to receive re-encrypted ciphertext
 
 3️⃣ Run the Data Owner (Alice)
 ```
@@ -95,6 +67,8 @@ Encrypts data and generates re-encryption key for Bob
 Sends ciphertext + rekey to the Cloud Server
 
 ⚠️ All components must be run in separate terminals/sessions
+
+---
 
 ## 🔄 Protocol Overview
 
@@ -122,6 +96,8 @@ He decrypts the data using his private key and retrieves the original plaintext 
 📷 Sample Screenshots
 Coming soon...
 You can include terminal logs showing encryption, rekey generation, and successful decryption.
+
+---
 
 ##  🛠️ Troubleshooting
 ❌ Build errors?
