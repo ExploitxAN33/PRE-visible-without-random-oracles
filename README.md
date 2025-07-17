@@ -28,32 +28,60 @@ This C++ project demonstrates **pairing-based PRE** with clear role separation, 
 - [OpenSSL](https://www.openssl.org/) development libraries
 - `make` (already included on most Unix systems)
 
-### 🔧 Build Steps
 
-```bash
-git clone https://github.com/ExploitxAN33/PRE-visible-without-random-oracles.git
-cd PRE-visible-without-random-oracles
-```
-make
-💡 If you want to use custom pairing parameters, generate your own params/a.param using pbc_param_gen.
+## Installation
 
-###  🚀 Usage Example
+1. **Clone the repository:**
+    ```
+    git clone https://github.com/ExploitxAN33/elgamal-PRE-secure-cloud-storage-attempt2.git
+    cd elgamal-PRE-secure-cloud-storage-attempt2
+    ```
 
-1. 1st Run Cloud Server on TCP 8080 port number
-```
-# Start the Cloud Server
-./build/cloud_server
-```
-2. 2nd run data user (Bob - delegate) where user generate keys , public key will upload in cloud 
-```
-# Start the Data User (Bob)
-./build/data_user 127.0.0.1 bob
-```
-3. after run data_owner (Alice - delegator).
-```
-# Start the Data Owner (Alice) and delegate access to Bob
-./build/data_owner 127.0.0.1 alice bob
-```
+2. **Install dependencies:**
+    On Ubuntu/Debian:
+   ```
+     sudo apt-get update
+     sudo apt-get install build-essential cmake libssl-dev
+   ```
+
+3. **Build the project:**
+    ```
+    cd build
+    cmake ..
+    make
+    ```
+    Binaries for `cloud_server`, `data_owner`, and `data_user` will be generated in the `build` directory.
+
+---
+
+## How to Run
+
+**Order of Execution (with TCP connections):**
+
+1. **Start the Cloud Server** (must be running before other modules):
+    ```
+    cd ..
+    ./Build/cloud_server 
+    ```
+    - The server listens for TCP connections from data users and data owners.
+
+2. **Run Data User** (connects to the cloud server via TCP):
+    ```
+    ./Build/data_user 127.0.0.1 alice
+    ```
+    - Initiates a TCP connection to the cloud server.
+    - Requests files and handles decryption keys.
+
+3. **Run Data Owner** (connects to the cloud server via TCP):
+    ```
+    ./Build/data_owner 127.0.0.1 alice bob
+    ```
+    - Initiates a TCP connection to the cloud server.
+    - Uploads and manages encrypted files.
+
+> **Note:**  
+> - Each component must be run in a separate terminal or process.  
+> - Ensure the server address and port are correctly configured in your configuration files or command-line arguments.
 
 ---
 
