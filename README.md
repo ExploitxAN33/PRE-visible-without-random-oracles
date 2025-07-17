@@ -33,8 +33,8 @@ This C++ project demonstrates **pairing-based PRE** with clear role separation, 
 
 1. **Clone the repository:**
     ```
-    git clone https://github.com/ExploitxAN33/elgamal-PRE-secure-cloud-storage-attempt2.git
-    cd elgamal-PRE-secure-cloud-storage-attempt2
+    git clone https://github.com/ExploitxAN33/PRE-visible-without-random-oracles.git
+    cd PRE-visible-without-random-oracles
     ```
 
 2. **Install dependencies:**
