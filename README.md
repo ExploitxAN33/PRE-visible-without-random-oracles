@@ -38,26 +38,19 @@ make
 💡 If you want to use custom pairing parameters, generate your own params/a.param using pbc_param_gen.
 
 ###  🚀 Usage Example
-1️⃣ Start the Proxy Cloud Server
 ```
+# Start the Cloud Server
 ./build/cloud_server
 ```
-Starts the TCP server to receive connections from Alice and Bob.
-
-2️⃣ Run the Data User (Bob)
 ```
-./build/data_user <server_ip> <user_id>
-# Example:
+# Start the Data User (Bob)
 ./build/data_user 127.0.0.1 bob
 ```
-Generates Bob’s key pair
-
-3️⃣ Run the Data Owner (Alice)
 ```
-./build/data_owner <server_ip> <owner_id> <user_id>
-# Example:
+# Start the Data Owner (Alice) and delegate access to Bob
 ./build/data_owner 127.0.0.1 alice bob
 ```
+
 Generates Alice’s key pair
 
 Fetches Bob’s public key
