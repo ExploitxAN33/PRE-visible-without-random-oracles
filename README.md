@@ -38,28 +38,22 @@ make
 💡 If you want to use custom pairing parameters, generate your own params/a.param using pbc_param_gen.
 
 ###  🚀 Usage Example
+
+1. 1st Run Cloud Server on TCP 8080 port number
 ```
 # Start the Cloud Server
 ./build/cloud_server
 ```
+2. 2nd run data user (Bob - delegate) where user generate keys , public key will upload in cloud 
 ```
 # Start the Data User (Bob)
 ./build/data_user 127.0.0.1 bob
 ```
+3. after run data_owner (Alice - delegator).
 ```
 # Start the Data Owner (Alice) and delegate access to Bob
 ./build/data_owner 127.0.0.1 alice bob
 ```
-
-Generates Alice’s key pair
-
-Fetches Bob’s public key
-
-Encrypts data and generates re-encryption key for Bob
-
-Sends ciphertext + rekey to the Cloud Server
-
-⚠️ All components must be run in separate terminals/sessions
 
 ---
 
