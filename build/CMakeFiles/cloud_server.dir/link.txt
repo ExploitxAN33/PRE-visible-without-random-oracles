@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/cloud_server.dir/link.d CMakeFiles/cloud_server.dir/src/cloud_server.cpp.o CMakeFiles/cloud_server.dir/src/common/pre_scheme.cpp.o CMakeFiles/cloud_server.dir/src/common/network_utils.cpp.o -o cloud_server  -Wl,-rpath,/usr/local/lib /usr/local/lib/libpbc.so /usr/local/lib/libgmp.so

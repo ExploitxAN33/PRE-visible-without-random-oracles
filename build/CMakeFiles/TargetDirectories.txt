@@ -1,5 +1,0 @@
-/home/ananta/visible_oracle/newcpp/build/CMakeFiles/cloud_server.dir
-/home/ananta/visible_oracle/newcpp/build/CMakeFiles/data_owner.dir
-/home/ananta/visible_oracle/newcpp/build/CMakeFiles/data_user.dir
-/home/ananta/visible_oracle/newcpp/build/CMakeFiles/edit_cache.dir
-/home/ananta/visible_oracle/newcpp/build/CMakeFiles/rebuild_cache.dir
