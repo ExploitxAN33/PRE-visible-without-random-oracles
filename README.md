@@ -46,6 +46,7 @@ This C++ project demonstrates **pairing-based PRE** with clear role separation, 
 
 3. **Build the project:**
     ```
+    mkdir build
     cd build
     cmake ..
     make
